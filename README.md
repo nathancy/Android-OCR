@@ -14,4 +14,6 @@ For other languages (Spanish, French, Chinese, etc.), the app will try to downlo
 
 ## Installation
 
-To build and run the app, clone this project, open it as an existing project in Android Studio, and click Run.
+To build and run the app in Android Studio:
+1. Check out project from Version control -> Github
+2. Enter https://github.com/nathancy/Android-OCR.git for the git repository. Use default gradle wrapper. If you get the error: "SDK location not found. Define location with sdk.dir in the local.properties file or with an ANDROID_HOME environment variable.", close the import project. Then press "Open an existing Android Studio project" and browse to where you selected to import. 
