@@ -166,6 +166,7 @@
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"    
               android:layout_alignParentTop="true"
+              android:layout_marginLeft="10sp"
               android:background="#0000"
               android:text=""
               android:textColor="@color/status_text"

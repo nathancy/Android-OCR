@@ -794,7 +794,7 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
       statusViewTop.setText(ocrResult.getText());
       int scaledSize = Math.max(22, 32 - ocrResult.getText().length() / 4);
       statusViewTop.setTextSize(TypedValue.COMPLEX_UNIT_SP, scaledSize);
-      statusViewTop.setTextColor(Color.BLACK);
+      statusViewTop.setTextColor(Color.WHITE);
       statusViewTop.setBackgroundResource(R.color.status_top_text_background);
 
       statusViewTop.getBackground().setAlpha(meanConfidence * (255 / 100));
