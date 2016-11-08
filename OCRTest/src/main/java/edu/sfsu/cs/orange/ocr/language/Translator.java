@@ -27,7 +27,7 @@ import edu.sfsu.cs.orange.ocr.PreferencesActivity;
  */
 public class Translator {
 
-  public static final String BAD_TRANSLATION_MSG = "[Translation unavailable]";
+  public static final String BAD_TRANSLATION_MSG = "[Translation Unavailable]";
   
   private Translator(Activity activity) {  
     // Private constructor to enforce noninstantiability

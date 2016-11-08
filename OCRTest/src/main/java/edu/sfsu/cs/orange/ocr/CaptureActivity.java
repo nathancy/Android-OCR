@@ -95,7 +95,7 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
   public static final boolean DEFAULT_TOGGLE_REVERSED_IMAGE = false;
   
   /** Whether to enable the use of online translation services be default. */
-  public static final boolean DEFAULT_TOGGLE_TRANSLATION = true;
+  public static final boolean DEFAULT_TOGGLE_TRANSLATION = false;
   
   /** Whether the light should be initially activated by default. */
   public static final boolean DEFAULT_TOGGLE_LIGHT = false;
@@ -881,7 +881,7 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
     case OPTIONS_COPY_RECOGNIZED_TEXT_ID:
         clipboardManager.setText(ocrResultView.getText());
       if (clipboardManager.hasText()) {
-        Toast toast = Toast.makeText(this, "Text copied.", Toast.LENGTH_LONG);
+        Toast toast = Toast.makeText(this, "Text copied successfully", Toast.LENGTH_LONG);
         toast.setGravity(Gravity.BOTTOM, 0, 0);
         toast.show();
       }
@@ -895,7 +895,7 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
     case OPTIONS_COPY_TRANSLATED_TEXT_ID:
         clipboardManager.setText(translationView.getText());
       if (clipboardManager.hasText()) {
-        Toast toast = Toast.makeText(this, "Text copied.", Toast.LENGTH_LONG);
+        Toast toast = Toast.makeText(this, "Text copied successfully", Toast.LENGTH_LONG);
         toast.setGravity(Gravity.BOTTOM, 0, 0);
         toast.show();
       }
@@ -994,14 +994,14 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
   }
   
   /**
-   * Requests autofocus after a 350 ms delay. This delay prevents requesting focus when the user 
+   * Requests autofocus after a 200 ms delay. This delay prevents requesting focus when the user 
    * just wants to click the shutter button without focusing. Quick button press/release will 
    * trigger onShutterButtonClick() before the focus kicks in.
    */
   private void requestDelayedAutoFocus() {
-    // Wait 350 ms before focusing to avoid interfering with quick button presses when
+    // Wait 200 ms before focusing to avoid interfering with quick button presses when
     // the user just wants to take a picture without focusing.
-    cameraManager.requestAutoFocus(350L);
+    cameraManager.requestAutoFocus(200L);
   }
   
   static boolean getFirstLaunch() {
