@@ -109,15 +109,12 @@ final class CaptureActivityHandler extends Handler {
   }
   
   void stop() {
-    // TODO See if this should be done by sending a quit message to decodeHandler as is done
-    // below in quitSynchronously().
-    
     Log.d(TAG, "Setting state to CONTINUOUS_PAUSED.");
     state = State.CONTINUOUS_PAUSED;
     removeMessages(R.id.ocr_continuous_decode);
     removeMessages(R.id.ocr_decode);
     removeMessages(R.id.ocr_continuous_decode_failed);
-    removeMessages(R.id.ocr_continuous_decode_succeeded); // TODO are these removeMessages() calls doing anything?
+    removeMessages(R.id.ocr_continuous_decode_succeeded); 
     
     // Freeze the view displayed to the user.
 //    CameraManager.get().stopPreview();
