@@ -1,19 +1,20 @@
-#android-ocr
+### TextBuddy Android App
 
-An experimental app for Android that performs optical character recognition (OCR) on images captured using the device camera.
+[![Video](http://img.youtube.com/vi/B7KG6iZU-ek/0.jpg)](https://www.youtube.com/watch?v=B7KG6iZU-ek)
 
-Runs the Tesseract OCR engine using [tess-two](https://github.com/rmtheis/tess-two), a fork of Tesseract Tools for Android.
 
-Most of the code making up the core structure of this project has been adapted from the ZXing Barcode Scanner. Along with Tesseract-OCR and Tesseract Tools for Android (tesseract-android-tools), several open source projects have been used in this project, including leptonica, google-api-translate-java, microsoft-translator-java-api, and jtar.
+TextBuddy is an Optical Character Recognition (OCR) application to simplify your life by providing the ability to convert any hard copy text into a digital file. Instantly scan desired text through the camera to the smartphone clipboard for use in any other external third-party app like messaging or email. Easily convert scanned text images or snippets of word fragments into word documents without the hassle of manually writing or typing words again.
 
-## Training data for OCR
+### Motivation
 
-A data file is required for every language you want to recognize. For English, this data file is included in the application assets and is automatically installed when the app is first run.
+The motivation behind this project was to integrate optical character recognition technology into an Android app with the ability to convert images and photographs into editable and searchable text. Instead of having to manually copy down words on paper or type text to a word document, one would be able to instantly convert fragments of text from a picture and have it automatically converted into a digital file such as a word document. In addition, one would be able to transform text in handwritten or printed text form to a digital file where it can be easily manipulated. Then one would be able to share the captured snippets through SMS or any other third-party application such as email.
 
-For other languages (Spanish, French, Chinese, etc.), the app will try to download the training data from an old Google Code repository that is no longer available, and [the download fails](https://github.com/rmtheis/android-ocr/issues/55). So if you want to use training data for other languages, you'll need to package the appropriate [training data files](https://github.com/tesseract-ocr/tessdata) in the app or change the code to point to your own download location.
+### Implementation
 
-## Installation
+The application utilizes the Tesseract Open Source OCR Engine which is essentially a large library that contains a set of Android APIs for image processing. The Tesseract engine has the capability of converting a wide range of image formats to text through trained data language files. The engine scans each character through the camera and converts it into a digital representation. Although the engine is fairly accurate at recognizing and converting printed documents, the engine loses accuracy if scanned on handwritten words. Through the OCR engine, we implemented character recognition with features such as window size adjustment, real-time character recognition, camera autofocus, mean-confidence prediction, and time-to-convert prediction. 
+
+### Developers Guide
 
 To build and run the app in Android Studio:
 1. Check out project from Version control -> Github
-2. Enter https://github.com/nathancy/Android-OCR.git for the git repository. Use default gradle wrapper. If you get the error: "SDK location not found. Define location with sdk.dir in the local.properties file or with an ANDROID_HOME environment variable.", close the import project. Then press "Open an existing Android Studio project" and browse to where you selected to import. 
+2. Use default gradle wrapper. If you get the error: "SDK location not found. Define location with sdk.dir in the local.properties file or with an ANDROID_HOME environment variable.", close the import project. Then press "Open an existing Android Studio project" and browse to where you selected to import. 
