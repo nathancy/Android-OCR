@@ -1,9 +1,11 @@
 ### TextBuddy Android App
 
+TextBuddy is an Optical Character Recognition (OCR) application to simplify your life by providing the ability to convert any hard copy text into a digital file. Instantly scan desired text through the camera to the smartphone clipboard for use in any other external third-party app like messaging or email. Easily convert scanned text images or snippets of word fragments into word documents without the hassle of manually writing or typing words again.
+
+### Video Demonstration
+
 [![Video](http://img.youtube.com/vi/B7KG6iZU-ek/0.jpg)](https://www.youtube.com/watch?v=B7KG6iZU-ek)
 
-
-TextBuddy is an Optical Character Recognition (OCR) application to simplify your life by providing the ability to convert any hard copy text into a digital file. Instantly scan desired text through the camera to the smartphone clipboard for use in any other external third-party app like messaging or email. Easily convert scanned text images or snippets of word fragments into word documents without the hassle of manually writing or typing words again.
 
 ### Motivation
 
